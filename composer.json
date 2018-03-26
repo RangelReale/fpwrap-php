@@ -1,0 +1,22 @@
+{
+  "name": "rangelreale/fpwrap-php",
+  "type": "library",
+  "description": "fproto-wrap utils for PHP",
+  "keywords": ["rpc"],
+  "homepage": "https://grpc.io",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "require": {
+    "php": ">=5.5.0",
+    "grpc/grpc": ">=1.7.0",
+    "google/protobuf": "*"
+  },
+  "suggest": {
+    "ext-protobuf": "For better performance, install the protobuf C extension."
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
