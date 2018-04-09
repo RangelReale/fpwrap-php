@@ -35,6 +35,18 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
      */
     private $string_eq = '';
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated string string_in = 22;</code>
+     */
+    private $string_in;
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated string string_not_in = 23;</code>
+     */
+    private $string_not_in;
+    /**
      * Field value of integer strictly greater than this value.
      *
      * Generated from protobuf field <code>int64 int_gt = 30;</code>
@@ -65,9 +77,21 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
      */
     private $int_eq = 0;
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 int_in = 35;</code>
+     */
+    private $int_in;
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 int_not_in = 36;</code>
+     */
+    private $int_not_in;
+    /**
      * In the case of enums, only allow defined values, else ignored.
      *
-     * Generated from protobuf field <code>bool int_enum_check = 70;</code>
+     * Generated from protobuf field <code>bool int_enum_check = 39;</code>
      */
     private $int_enum_check = false;
     /**
@@ -117,6 +141,18 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
      */
     private $float_eq = 0.0;
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated double float_in = 46;</code>
+     */
+    private $float_in;
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated double float_not_in = 47;</code>
+     */
+    private $float_not_in;
+    /**
      * Field value of length greater than this value.
      *
      * Generated from protobuf field <code>int64 length_gt = 50;</code>
@@ -147,6 +183,20 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
      */
     private $length_eq = 0;
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_in = 55;</code>
+     */
+    private $length_in;
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_not_in = 56;</code>
+     */
+    private $length_not_in;
+    /**
+     * Bool must be this value
+     *
      * Generated from protobuf field <code>bool bool_eq = 60;</code>
      */
     private $bool_eq = false;
@@ -230,6 +280,58 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->string_eq = $var;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated string string_in = 22;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getStringIn()
+    {
+        return $this->string_in;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated string string_in = 22;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setStringIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->string_in = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated string string_not_in = 23;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getStringNotIn()
+    {
+        return $this->string_not_in;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated string string_not_in = 23;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setStringNotIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->string_not_in = $arr;
 
         return $this;
     }
@@ -365,9 +467,61 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 int_in = 35;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getIntIn()
+    {
+        return $this->int_in;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 int_in = 35;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setIntIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->int_in = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 int_not_in = 36;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getIntNotIn()
+    {
+        return $this->int_not_in;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 int_not_in = 36;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setIntNotIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->int_not_in = $arr;
+
+        return $this;
+    }
+
+    /**
      * In the case of enums, only allow defined values, else ignored.
      *
-     * Generated from protobuf field <code>bool int_enum_check = 70;</code>
+     * Generated from protobuf field <code>bool int_enum_check = 39;</code>
      * @return bool
      */
     public function getIntEnumCheck()
@@ -378,7 +532,7 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
     /**
      * In the case of enums, only allow defined values, else ignored.
      *
-     * Generated from protobuf field <code>bool int_enum_check = 70;</code>
+     * Generated from protobuf field <code>bool int_enum_check = 39;</code>
      * @param bool $var
      * @return $this
      */
@@ -567,6 +721,58 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated double float_in = 46;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getFloatIn()
+    {
+        return $this->float_in;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated double float_in = 46;</code>
+     * @param float[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setFloatIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::DOUBLE);
+        $this->float_in = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated double float_not_in = 47;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getFloatNotIn()
+    {
+        return $this->float_not_in;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated double float_not_in = 47;</code>
+     * @param float[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setFloatNotIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::DOUBLE);
+        $this->float_not_in = $arr;
+
+        return $this;
+    }
+
+    /**
      * Field value of length greater than this value.
      *
      * Generated from protobuf field <code>int64 length_gt = 50;</code>
@@ -697,6 +903,60 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_in = 55;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLengthIn()
+    {
+        return $this->length_in;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_in = 55;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLengthIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->length_in = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_not_in = 56;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLengthNotIn()
+    {
+        return $this->length_not_in;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_not_in = 56;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLengthNotIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->length_not_in = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Bool must be this value
+     *
      * Generated from protobuf field <code>bool bool_eq = 60;</code>
      * @return bool
      */
@@ -706,6 +966,8 @@ class FieldValidator extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Bool must be this value
+     *
      * Generated from protobuf field <code>bool bool_eq = 60;</code>
      * @param bool $var
      * @return $this

@@ -49,6 +49,18 @@ class RepeatedFieldValidator extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 length_eq = 16;</code>
      */
     private $length_eq = 0;
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_in = 17;</code>
+     */
+    private $length_in;
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_not_in = 18;</code>
+     */
+    private $length_not_in;
 
     public function __construct() {
         \GPBMetadata\GithubCom\RangelReale\FprotoWrapValidatorStd\Validator::initOnce();
@@ -207,6 +219,58 @@ class RepeatedFieldValidator extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->length_eq = $var;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_in = 17;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLengthIn()
+    {
+        return $this->length_in;
+    }
+
+    /**
+     * Only allow items in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_in = 17;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLengthIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->length_in = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_not_in = 18;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLengthNotIn()
+    {
+        return $this->length_not_in;
+    }
+
+    /**
+     * Only allow items NOT in this list.
+     *
+     * Generated from protobuf field <code>repeated int64 length_not_in = 18;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLengthNotIn($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->length_not_in = $arr;
 
         return $this;
     }
